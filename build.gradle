@@ -1,0 +1,67 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = '1.0.0'
+
+jar {
+    manifest {
+        attributes (
+            'Implementation-Title': 'Hello Java Testing Tools!', 
+            'Implementation-Version': version
+        )
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'log4j:log4j:1.2.17'
+    compile 'org.slf4j:slf4j-log4j12:1.7.10'
+    compile 'com.jcabi:jcabi-log:0.17.1'
+    compile 'org.projectlombok:lombok:1.16.18'
+    compile 'org.javalite:javalite-common:1.4.13.j7'
+    testCompile 'br.com.six2six:bfgex:1.1.1'
+    testCompile 'br.com.six2six:fixture-factory:3.1.0'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+    testCompile 'org.assertj:assertj-db:1.2.0'
+    testCompile 'org.assertj:assertj-swing:3.8.0'
+    testCompile 'org.assertj:assertj-guava:3.1.0'
+    testCompile 'org.assertj:assertj-swing-junit:3.8.0'
+    testCompile 'org.assertj:assertj-joda-time:2.0.0'
+    testCompile 'org.assertj:assertj-assertions-generator:2.1.0'
+    testCompile 'org.assertj:assertj-neo4j:2.0.1'
+    testCompile 'org.hamcrest:java-hamcrest:2.0.0.0'
+    testCompile 'com.github.javafaker:javafaker:0.13'
+    testCompile 'io.codearte.jfairy:jfairy:0.5.8'
+    testCompile 'org.fluttercode.datafactory:datafactory:0.8'
+    testCompile 'com.github.mirreck:java-fake-factory:1.0.2'
+    testCompile 'com.github.regis-leray:factory-duke:0.8'
+    testCompile 'ie.corballis:json-fixtures-lib:1.0.4'
+    testCompile 'io.beanmother:beanmother:0.7.3'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+    testCompile 'com.tngtech.jgiven:jgiven-junit:0.15.3'
+    testCompile 'com.insightfullogic:lambda-behave:0.4'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+    testCompile 'com.codeborne:selenide:4.8'
+    testCompile 'io.github.j8spec:j8spec:3.0.0'
+    testCompile 'com.github.database-rider:rider-parent:1.2.2'
+    testCompile 'com.icegreen:greenmail:1.5.5'
+    testCompile 'org.jbehave:jbehave:4.1.2'
+    testCompile 'pl.pragmatists:JUnitParams:1.1.0'
+    testCompile 'org.mockito:mockito-core:2.10.0'
+    testCompile 'io.cucumber:cucumber-java:2.0.1'
+    testCompile 'io.cucumber:cucumber-java8:2.0.1'
+    testCompile 'lv.ctco.cukes:cukes-rest:0.0.16'
+    testCompile 'org.skyscreamer:jsonassert:1.5.0'
+    testCompile 'guru.nidi.raml:raml-tester:0.9.1'
+    testCompile 'io.rest-assured:rest-assured:3.0.5'
+    testCompile 'com.google.truth:truth:0.36'
+
+}
